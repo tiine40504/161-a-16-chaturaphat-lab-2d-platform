@@ -19,6 +19,8 @@ public class crocodile : Enemy , IShootable
 
         atkRange = 6.0f;
         player = GameObject.FindFirstObjectByType<Player>();
+
+        ReloadTime = 1.0f;
     }
 
     private void FixedUpdate()
@@ -47,7 +49,7 @@ public class crocodile : Enemy , IShootable
             if (waitTime >= ReloadTime)
 
             {
-                anim.SetTrigger("shoot");
+                anim.SetTrigger("Shoot");
                 var bullet = Instantiate(Bullet, ShootPoint.position, Quaternion.identity);
                 Rock rock = bullet.GetComponent<Rock>();
                 if (rock != null)

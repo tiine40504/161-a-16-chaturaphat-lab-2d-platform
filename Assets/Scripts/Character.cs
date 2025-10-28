@@ -6,7 +6,7 @@ public class Character : MonoBehaviour
     private int health;
     public int Health { get => health; set => health = (value < 0)? 0 : value; }
 
-    protected Animation anim;
+    protected Animator anim;
     protected Rigidbody2D rb;
 
      //methods
@@ -15,7 +15,7 @@ public class Character : MonoBehaviour
         Health = starthealth;
         Debug.Log($"{this.name} initial Health: {this.Health}.");
 
-        anim = GetComponent<Animation>();
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
