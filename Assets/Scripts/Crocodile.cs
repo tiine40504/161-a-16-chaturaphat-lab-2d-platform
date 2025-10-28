@@ -1,10 +1,15 @@
 using UnityEngine;
 
-public class crocodile : Enemy
+public class crocodile : Enemy , IShootable
 {
 
     [SerializeField]private float atkRange;
     public Player player;
+
+    [field: SerializeField] public GameObject Bullet { get; set; }
+    [field: SerializeField] public Transform ShootPoint { get; set; }
+    public float ReloadTime { get; set; }
+    public float waitTime { get; set; }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,6 +23,7 @@ public class crocodile : Enemy
 
     private void FixedUpdate()
     {
+        waitTime += Time.fixedDeltaTime;
         Behavior();
     }
 
@@ -36,7 +42,24 @@ public class crocodile : Enemy
 
     public void Shoot()
     {
-        Debug.Log($"{this.name} shoots rock to the {player.name}!");
+        if (Bullet != null) 
+        {
+            if (waitTime >= ReloadTime)
+
+            {
+                anim.SetTrigger("shoot");
+                var bullet = Instantiate(Bullet, ShootPoint.position, Quaternion.identity);
+                Rock rock = bullet.GetComponent<Rock>();
+                if (rock != null)
+
+
+
+
+                    rock.InitWeapon(20, this);
+
+                waitTime = 0.0f;
+            }
+        }
     }
 
     // Update is called once per frame

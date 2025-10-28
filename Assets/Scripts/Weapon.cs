@@ -21,8 +21,8 @@ public abstract class Weapon : MonoBehaviour
         float vale = Shooter.ShootPoint.position.x - Shooter.ShootPoint.parent.position.x;
 
         if (vale < 0)
-            return 1;
-        else return -1;
+            return -1;
+        else return 1;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

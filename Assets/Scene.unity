@@ -1726,6 +1726,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   atkRange: 0
   player: {fileID: 0}
+  <Bullet>k__BackingField: {fileID: 115806, guid: 40466c5ac40024bbca1e4b144cdf43c2, type: 3}
+  <ShootPoint>k__BackingField: {fileID: 1364557763}
 --- !u!4 &620366148 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 407626, guid: efff92728486e44de9714de91b3abbd2, type: 3}
@@ -3509,7 +3511,7 @@ Transform:
   m_GameObject: {fileID: 1364557762}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.64, y: -0.03, z: 0}
+  m_LocalPosition: {x: -1.6399999, y: -0.029999971, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4226,6 +4228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa3409aa8ddfb48498b8b64ece66605f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Bullet>k__BackingField: {fileID: 182108, guid: a5638a192258f4059b0e074542d33fbc, type: 3}
+  <ShootPoint>k__BackingField: {fileID: 1075165078}
 --- !u!1001 &1697656582
 PrefabInstance:
   m_ObjectHideFlags: 0
