@@ -28,7 +28,7 @@ public class Character : MonoBehaviour
                 
                 // Invoke คือการเช็คว่ามีใครมา subscribe event นี้หรือไม่ ถ้ามีก็ค่อยเรียก
                 OnHealthChanged?.Invoke(health, maxHealth);
-                // ------------------------
+                
             }
         }
     }

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Slider))] 
 public class HealthBar : MonoBehaviour
 {
-    [Tooltip("ตัวละครที่ Health Bar นี้จะติดตาม")]
+    [Tooltip("The characters that this Health Bar will follow")]
     [SerializeField]
     private Character targetCharacter;
 
@@ -20,7 +20,7 @@ public class HealthBar : MonoBehaviour
     {
         if (targetCharacter == null)
         {
-            Debug.LogWarning("ยังไม่ได้กำหนด Target Character ให้กับ HealthBar!", this);
+            Debug.LogWarning("The Target Character has not been set for the HealthBar yet!", this);
             return;
         }
 
